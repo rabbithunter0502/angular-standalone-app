@@ -1,0 +1,17 @@
+<div class="card box" *ngIf="project">
+  <div class="image">
+    <a><img class="h-2 hm-2 image-fill" src="{{ project.image }}" /></a>
+  </div>
+  <div class="content hspace card card-v c-7">
+    <h4 class="f6 weight-bold">
+      <a routerLink="/projects/{{ project.id }}">{{ project.title }}</a>
+    </h4>
+    <!-- a standalone component -->
+    <gr-stars [rating]="3"></gr-stars>
+    <div class="small light">{{ project.description }}</div>
+  </div>
+  <div class="extra c-2">
+    <div class="f6 weight-normal">{{ project.category.value }}</div>
+    <div>{{ 4 | grCurrency:'TRY' }}</div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="page">
+  <div class="container">
+    <h4>Stand alone stuff in here</h4>
+    <p>{{345.25 | grCurrency:'TRY'}}</p>
+
+    <div class="box" *ngIf="testMe">
+      <h4>Stand alone partial common component</h4>
+      <gr-stars [rating]="2"></gr-stars>
+    </div>
+    <a routerLink="/projects">Go to projects</a>
+    <div>
+      <gr-pager [isLoadMore]="true"></gr-pager>
+    </div>
+    <div class="box">
+      <gr-project-card [project]="project"></gr-project-card>
+    </div>
+  </div>
+</div>

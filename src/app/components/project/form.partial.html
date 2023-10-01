@@ -1,0 +1,19 @@
+<form [formGroup]="projectForm" novalidate>
+  <fieldset>
+    <legend>Name</legend>
+    <div class="spaced">
+      <input
+        type="text"
+        id="name"
+        class="w100"
+        mdinput
+        formControlName="name"
+        [required]="true"
+      />
+    </div>
+  </fieldset>
+
+  <div class="breath">
+    <button class="btn-rev" type="submit" (click)="saveProject()">Save</button>
+  </div>
+</form>

@@ -1,0 +1,21 @@
+<div class="page">
+  <div class="container">
+    <div class="txt-c">
+      <button class="btn-rev" routerLink="/projects/create">
+        + Create project
+      </button>
+    </div>
+    <ul class="rowlist">
+      <li
+        class="box-shadow-normal spaced"
+        *ngFor="let project of projects$ | async"
+      >
+        <gr-project-card [project]="project"></gr-project-card>
+      </li>
+    </ul>
+    <div class="box" *grLet="testme$ | async as value">
+      Show always {{ value }}
+    </div>
+    <gr-pager [isLoadMore]="true"></gr-pager>
+  </div>
+</div>

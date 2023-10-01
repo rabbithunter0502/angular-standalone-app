@@ -1,0 +1,20 @@
+<div class="page">
+  <div class="container">
+    <a routerLink="/">Home</a> | <a routerLink="/projects">Projects</a> |
+    <a routerLink="/content/showcard">Content</a> |
+    <a routerLink="/content/standalone">Standalone route</a> |
+    <a routerLink="/lazyloadedstandalone">Lazyloaded Standalone route</a> |
+    <a routerLink="/content/http">HTTP interceptors</a> |
+
+    <hr class="spaced" />
+    <button class="btn" (click)="showToast()">
+      Show toast with fallback message
+    </button>
+
+    <hr class="spaced" />
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<!-- Notice this, it will be a standalone component thus, it will be placed in the imports array -->
+
+<gr-toast></gr-toast>
